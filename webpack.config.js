@@ -11,7 +11,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "Weather 'O-Mat",
+      template: "./src/index.html",
     }),
     new ESLintPlugin(),
   ],
