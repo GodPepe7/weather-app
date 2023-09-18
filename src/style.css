@@ -45,6 +45,20 @@ body {
   align-items: flex-start;
 }
 
+.toggle-container {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  margin-left: 25px;
+}
+
+.temp-toggle {
+  height: 20px;
+  width: 20px;
+}
+
 .input-container {
   display: flex;
   align-items: start;
