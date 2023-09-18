@@ -13,16 +13,20 @@
         <div class="temp-format">
           <p class="overview__temp">31</p>
           <p class="degree">°C</p>
+          <input type="checkbox" class="temp-toggle" />
         </div>
         <p class="overview__date">Saturday, 16.09.2023</p>
       </div>
       <div class="input-container">
-        <input
-          class="head__location-input"
-          type="text"
-          placeholder="Enter Location"
-        />
-        <button class="enter-btn">Enter</button>
+        <form id="target-location-form">
+          <input
+            class="head__location-input"
+            type="text"
+            placeholder="Enter Location"
+            required
+          />
+          <button class="enter-btn">Enter</button>
+        </form>
       </div>
     </div>
     <div class="main">
@@ -33,11 +37,7 @@
             <p class="day__date">Today</p>
             <div class="day__body">
               <div class="day__body__left">
-                <img
-                  src="../resources/weather/weather/64x64/day/113.png"
-                  class="weather-icon"
-                  alt="weather condition"
-                />
+                <img src="" class="weather-icon" alt="weather condition" />
                 <div class="day__temps">
                   <p class="day__high">31°C</p>
                   <p class="day__low">17°C</p>
@@ -60,11 +60,7 @@
             <p class="day__date">Today</p>
             <div class="day__body">
               <div class="day__body__left">
-                <img
-                  src="../resources/weather/weather/64x64/day/113.png"
-                  class="weather-icon"
-                  alt="weather condition"
-                />
+                <img src="" class="weather-icon" alt="weather condition" />
                 <div class="day__temps">
                   <p class="day__high">31°C</p>
                   <p class="day__low">17°C</p>
@@ -87,11 +83,7 @@
             <p class="day__date">Today</p>
             <div class="day__body">
               <div class="day__body__left">
-                <img
-                  src="../resources/weather/weather/64x64/day/113.png"
-                  class="weather-icon"
-                  alt="weather condition"
-                />
+                <img src="" class="weather-icon" alt="weather condition" />
                 <div class="day__temps">
                   <p class="day__high">31°C</p>
                   <p class="day__low">17°C</p>
@@ -114,124 +106,14 @@
       </div>
       <div class="main__hours-section">
         <h3>24 Hours</h3>
-        <div class="hours__body">
+        <template id="hour-template">
           <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">12:00</p>
-            <img
-              src="../resources/weather/weather/64x64/day/293.png"
-              class="weather-icon"
-              alt="weather-condition"
-            />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">13:00</p>
+            <p class="hour__time"></p>
             <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
+            <p class="hour__temp"></p>
           </div>
-          <div class="hour">
-            <p class="hour__time">14:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">15:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">16:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">17:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">18:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-          <div class="hour">
-            <p class="hour__time">19:00</p>
-            <img src="" class="weather-icon" alt="weather-condition" />
-            <p class="hour__temp">17°C</p>
-          </div>
-        </div>
+        </template>
+        <div class="hours__body"></div>
       </div>
     </div>
   </body>
