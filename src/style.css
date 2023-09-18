@@ -28,6 +28,8 @@ body {
 .head {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .overview__temp {
@@ -170,7 +172,7 @@ body {
 
 .hour {
   padding: 10px 0;
-  min-width: 125px;
+  min-width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
