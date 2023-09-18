@@ -7,6 +7,7 @@ const domController = (() => {
   const form = document.querySelector("#target-location-form");
   const overviewLocation = document.querySelector(".overview__location");
   const overviewTemp = document.querySelector(".overview__temp");
+  const overviewTempUnit = document.querySelector(".overview__unit");
   const overviewDate = document.querySelector(".overview__date");
   const days = document.querySelectorAll(".day");
   const hoursBody = document.querySelector(".hours__body");
@@ -80,8 +81,9 @@ const domController = (() => {
       day: "numeric",
     };
     formattedDate = formattedDate.toLocaleDateString("en-US", options);
-    overviewTemp.textContent = `${temp}`;
-    overviewDate.textContent = `${formattedDate}`;
+    overviewTemp.textContent = temp;
+    overviewTempUnit.textContent = isCelcius ? "°C" : "°F";
+    overviewDate.textContent = formattedDate;
   };
 
   const fillDays = (daysData) => {
@@ -123,7 +125,7 @@ const domController = (() => {
       location: { name, region, country, localtime },
       current: { temp_c, temp_f },
     } = weatherData;
-    const temp = isCelcius ? `${temp_c}°C` : `${temp_f}°F`;
+    const temp = isCelcius ? temp_c : temp_f;
     const overviewData = { name, region, country, localtime, temp };
     fillOverview(overviewData);
 
