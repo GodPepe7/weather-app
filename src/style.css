@@ -116,6 +116,7 @@ body {
 .day__body__right {
   display: flex;
   flex-direction: column;
+  text-align: right;
   justify-content: center;
   align-items: end;
   margin-right: 20px;
